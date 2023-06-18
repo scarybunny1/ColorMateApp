@@ -9,19 +9,35 @@
 /* Begin PBXBuildFile section */
 		3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2C72A3C712D007B9D64 /* AppDelegate.swift */; };
 		3A05E2CA2A3C712D007B9D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2C92A3C712D007B9D64 /* SceneDelegate.swift */; };
-		3A05E2CC2A3C712D007B9D64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2CB2A3C712D007B9D64 /* ViewController.swift */; };
 		3A05E2D12A3C712D007B9D64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A05E2D02A3C712D007B9D64 /* Assets.xcassets */; };
 		3A05E2D42A3C712D007B9D64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A05E2D22A3C712D007B9D64 /* LaunchScreen.storyboard */; };
+		3A05E2E82A3C7D46007B9D64 /* CMThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2E72A3C7D46007B9D64 /* CMThemeManager.swift */; };
+		3A05E2EA2A3C820C007B9D64 /* CMNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2E92A3C820C007B9D64 /* CMNotifications.swift */; };
+		3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */; };
+		3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */; };
+		3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */; };
+		3A05E2F22A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */; };
+		3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F32A3CA132007B9D64 /* TabBarController.swift */; };
+		3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A32A3DE9BE0001C69B /* Extensions.swift */; };
+		3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A05E2C42A3C712D007B9D64 /* ColorMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A05E2C72A3C712D007B9D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A05E2C92A3C712D007B9D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A05E2CB2A3C712D007B9D64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A05E2D02A3C712D007B9D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A05E2D32A3C712D007B9D64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A05E2D52A3C712D007B9D64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A05E2E72A3C7D46007B9D64 /* CMThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMThemeManager.swift; sourceTree = "<group>"; };
+		3A05E2E92A3C820C007B9D64 /* CMNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMNotifications.swift; sourceTree = "<group>"; };
+		3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBaseViewController.swift; sourceTree = "<group>"; };
+		3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMScanViewController.swift; sourceTree = "<group>"; };
+		3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorsViewController.swift; sourceTree = "<group>"; };
+		3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorOfTheDayViewController.swift; sourceTree = "<group>"; };
+		3A05E2F32A3CA132007B9D64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3A1C11A32A3DE9BE0001C69B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,86 @@
 		3A05E2C62A3C712D007B9D64 /* ColorMate */ = {
 			isa = PBXGroup;
 			children = (
-				3A05E2C72A3C712D007B9D64 /* AppDelegate.swift */,
-				3A05E2C92A3C712D007B9D64 /* SceneDelegate.swift */,
-				3A05E2CB2A3C712D007B9D64 /* ViewController.swift */,
-				3A05E2D02A3C712D007B9D64 /* Assets.xcassets */,
-				3A05E2D22A3C712D007B9D64 /* LaunchScreen.storyboard */,
+				3A05E2E42A3C7930007B9D64 /* Models */,
+				3A05E2E32A3C7929007B9D64 /* Resources */,
+				3A1C11A22A3DE9A90001C69B /* Extensions */,
+				3A05E2E22A3C7921007B9D64 /* ViewModels */,
+				3A05E2E12A3C791C007B9D64 /* Views */,
+				3A05E2E02A3C7917007B9D64 /* Controllers */,
+				3A05E2DF2A3C790F007B9D64 /* App Files */,
+				3A05E2DD2A3C7904007B9D64 /* Helpers */,
 				3A05E2D52A3C712D007B9D64 /* Info.plist */,
 			);
 			path = ColorMate;
+			sourceTree = "<group>";
+		};
+		3A05E2DD2A3C7904007B9D64 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2E72A3C7D46007B9D64 /* CMThemeManager.swift */,
+				3A05E2E92A3C820C007B9D64 /* CMNotifications.swift */,
+				3A05E2F32A3CA132007B9D64 /* TabBarController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3A05E2DF2A3C790F007B9D64 /* App Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2C72A3C712D007B9D64 /* AppDelegate.swift */,
+				3A05E2C92A3C712D007B9D64 /* SceneDelegate.swift */,
+			);
+			path = "App Files";
+			sourceTree = "<group>";
+		};
+		3A05E2E02A3C7917007B9D64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */,
+				3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */,
+				3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */,
+				3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */,
+				3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A05E2E12A3C791C007B9D64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A05E2E22A3C7921007B9D64 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A05E2E32A3C7929007B9D64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2D02A3C712D007B9D64 /* Assets.xcassets */,
+				3A05E2D22A3C712D007B9D64 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A05E2E42A3C7930007B9D64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A1C11A22A3DE9A90001C69B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A1C11A32A3DE9BE0001C69B /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +222,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A05E2CC2A3C712D007B9D64 /* ViewController.swift in Sources */,
+				3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */,
 				3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */,
+				3A05E2F22A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift in Sources */,
+				3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */,
+				3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */,
+				3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */,
 				3A05E2CA2A3C712D007B9D64 /* SceneDelegate.swift in Sources */,
+				3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */,
+				3A05E2EA2A3C820C007B9D64 /* CMNotifications.swift in Sources */,
+				3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */,
+				3A05E2E82A3C7D46007B9D64 /* CMThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
