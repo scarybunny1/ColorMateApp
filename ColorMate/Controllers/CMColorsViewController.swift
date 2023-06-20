@@ -86,18 +86,13 @@ class CMColorsViewController: CMViewController {
         alertVC.addTextField{tf in
             tf.placeholder = "Blue"
         }
-        alertVC.addTextField{tf in
-            tf.placeholder = "Alpha"
-            tf.text = "1"
-        }
         alertVC.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alertVC.addAction(UIAlertAction(title: "Submit", style: .default, handler: { [weak self] alert in
-            guard let self = self, let red = alertVC.textFields?.first?.text, let green = alertVC.textFields?[1].text, let blue = alertVC.textFields?[2].text, let alpha = alertVC.textFields?.last?.text else{return}
+            guard let self = self, let red = alertVC.textFields?.first?.text, let green = alertVC.textFields?[1].text, let blue = alertVC.textFields?[2].text else{return}
             let cgfloat_red = CGFloat(truncating: NumberFormatter().number(from: red)!)
             let cgfloat_green = CGFloat(truncating: NumberFormatter().number(from: green)!)
             let cgfloat_blue = CGFloat(truncating: NumberFormatter().number(from: blue)!)
-            let cgfloat_alpha = CGFloat(truncating: NumberFormatter().number(from: alpha)!)
-            self.add(color: RGBA(red: cgfloat_red, green: cgfloat_green, blue: cgfloat_blue, alpha: cgfloat_alpha))
+            self.add(color: RGBA(red: cgfloat_red, green: cgfloat_green, blue: cgfloat_blue))
         }))
         present(alertVC, animated: true)
     }
@@ -107,7 +102,7 @@ class CMColorsViewController: CMViewController {
         colorView.translatesAutoresizingMaskIntoConstraints = false
         colorView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        colorView.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
+        colorView.backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: 1)
         
         stackView.addArrangedSubview(colorView)
         stackView.layoutIfNeeded()

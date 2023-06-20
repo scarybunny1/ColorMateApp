@@ -18,6 +18,9 @@
 		3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */; };
 		3A05E2F22A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */; };
 		3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F32A3CA132007B9D64 /* TabBarController.swift */; };
+		3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */; };
+		3A0C44B12A41E49400FE97C8 /* CMColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */; };
+		3A0C44B32A41EBE600FE97C8 /* CMColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */; };
 		3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A32A3DE9BE0001C69B /* Extensions.swift */; };
 		3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +39,9 @@
 		3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorsViewController.swift; sourceTree = "<group>"; };
 		3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorOfTheDayViewController.swift; sourceTree = "<group>"; };
 		3A05E2F32A3CA132007B9D64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorRequest.swift; sourceTree = "<group>"; };
+		3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorResponse.swift; sourceTree = "<group>"; };
 		3A1C11A32A3DE9BE0001C69B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +76,7 @@
 		3A05E2C62A3C712D007B9D64 /* ColorMate */ = {
 			isa = PBXGroup;
 			children = (
+				3A0C44AD2A41E3C900FE97C8 /* Services */,
 				3A05E2E42A3C7930007B9D64 /* Models */,
 				3A05E2E32A3C7929007B9D64 /* Resources */,
 				3A1C11A22A3DE9A90001C69B /* Extensions */,
@@ -140,8 +147,18 @@
 		3A05E2E42A3C7930007B9D64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */,
+				3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3A0C44AD2A41E3C900FE97C8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		3A1C11A22A3DE9A90001C69B /* Extensions */ = {
@@ -222,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */,
 				3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */,
 				3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */,
 				3A05E2F22A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift in Sources */,
@@ -229,7 +247,9 @@
 				3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */,
 				3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */,
 				3A05E2CA2A3C712D007B9D64 /* SceneDelegate.swift in Sources */,
+				3A0C44B12A41E49400FE97C8 /* CMColorRequest.swift in Sources */,
 				3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */,
+				3A0C44B32A41EBE600FE97C8 /* CMColorResponse.swift in Sources */,
 				3A05E2EA2A3C820C007B9D64 /* CMNotifications.swift in Sources */,
 				3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */,
 				3A05E2E82A3C7D46007B9D64 /* CMThemeManager.swift in Sources */,
