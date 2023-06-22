@@ -10,13 +10,9 @@ import AVFoundation
 
 class CMScanViewController: CMViewController {
     
-    //Capture session
     var session: AVCaptureSession?
-    //Photo Output
     let output = AVCapturePhotoOutput()
-    //Video Preview
     let previewLayer = AVCaptureVideoPreviewLayer()
-    //Shutter button
     let shutterButton: UIButton = {
         let b = UIButton()
         b.layer.cornerRadius = 50
@@ -24,6 +20,20 @@ class CMScanViewController: CMViewController {
         b.layer.borderColor = UIColor.white.cgColor
         b.backgroundColor = .black
         return b
+    }()
+    var capturedImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.isHidden = true
+        return iv
+    }()
+    
+    let crosshairView: UIView = {
+        let v = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        v.layer.borderWidth = 1
+        v.layer.cornerRadius = 10
+        v.backgroundColor = .clear
+        v.layer.borderColor = UIColor.white.cgColor
+        return v
     }()
     
     override func viewDidLoad() {
@@ -33,6 +43,8 @@ class CMScanViewController: CMViewController {
         checkCameraPermissions()
         view.layer.addSublayer(previewLayer)
         view.addSubview(shutterButton)
+        view.addSubview(capturedImageView)
+        view.addSubview(crosshairView)
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,6 +55,7 @@ class CMScanViewController: CMViewController {
     
     func setUpViews() {
         previewLayer.frame = view.bounds
+        capturedImageView.frame = view.bounds
         shutterButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             shutterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -52,6 +65,7 @@ class CMScanViewController: CMViewController {
         ])
 
         shutterButton.addTarget(self, action: #selector(didTapShutterButton), for: .touchUpInside)
+        crosshairView.center = view.center
     }
     
     func setUpLayout() {
@@ -96,10 +110,6 @@ class CMScanViewController: CMViewController {
                     session.addOutput(output)
                 }
                 
-//                let videoOutput = AVCaptureVideoDataOutput()
-//                videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
-//                session.addOutput(videoOutput)
-                
                 previewLayer.session = session
                 previewLayer.videoGravity = .resizeAspectFill
                 DispatchQueue.global(qos: .background).async {
@@ -116,7 +126,6 @@ class CMScanViewController: CMViewController {
     
     @objc private func didTapShutterButton(){
         output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-        
     }
     
 }
@@ -127,10 +136,8 @@ extension CMScanViewController: AVCapturePhotoCaptureDelegate, AVCaptureVideoDat
             return
         }
         guard let image = UIImage(data: data) else{return}
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
-        imageView.frame = view.bounds
-        view.addSubview(imageView)
+        capturedImageView.image = image
+        capturedImageView.isHidden = false
         let center_point = CGPoint(x: image.size.height / 2, y: image.size.width / 2)
         let rgba = image.getPixelColor(pos: center_point)
         
@@ -140,6 +147,7 @@ extension CMScanViewController: AVCapturePhotoCaptureDelegate, AVCaptureVideoDat
     
     private func showColorDetailsBottomSheet(for color_rgba: RGBA){
         let detailVC = CMColorDetailViewController(rgba: color_rgba)
+        detailVC.delegate = self
         
         let nav = UINavigationController(rootViewController: detailVC)
         if let sheet = nav.sheetPresentationController{
@@ -152,43 +160,14 @@ extension CMScanViewController: AVCapturePhotoCaptureDelegate, AVCaptureVideoDat
         present(nav, animated: true)
     }
     
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-            // Check if the camera is focused before processing the frame
-            guard connection.isVideoOrientationSupported,
-                  connection.isActive,
-                  connection.isVideoMirroringSupported,
-                  connection.isVideoMirrored == false,
-                  connection.isEnabled else {
-                return
-            }
+}
 
-            // Convert sample buffer to a pixel buffer
-            guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-
-            // Get the center pixel coordinates
-            let pixelWidth = CVPixelBufferGetWidth(pixelBuffer)
-            let pixelHeight = CVPixelBufferGetHeight(pixelBuffer)
-            let centerX = pixelWidth / 2
-            let centerY = pixelHeight / 2
-
-            // Lock the base address for efficient pixel access
-            CVPixelBufferLockBaseAddress(pixelBuffer, .readOnly)
-
-            // Get the RGB values of the center pixel
-            if let baseAddress = CVPixelBufferGetBaseAddress(pixelBuffer) {
-                let bytesPerPixel = 4 // Assuming 4 bytes per pixel (32-bit RGBA)
-                let bytesPerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
-                let pixelAddress = baseAddress.advanced(by: (centerY * bytesPerRow) + (centerX * bytesPerPixel))
-
-                let pixelData = UnsafeBufferPointer(start: pixelAddress.assumingMemoryBound(to: UInt8.self), count: bytesPerPixel)
-                let red = pixelData[0]
-                let green = pixelData[1]
-                let blue = pixelData[2]
-
-                print("RGB values - R: \(red), G: \(green), B: \(blue)")
-            }
-
-            // Unlock the base address after accessing the pixel data
-            CVPixelBufferUnlockBaseAddress(pixelBuffer, .readOnly)
+extension CMScanViewController: CMColorDetailViewControllerDelegate{
+    func colorDetailVC(_ vc: CMColorDetailViewController, didGetDismissed: Bool) {
+        capturedImageView.isHidden = true
+        DispatchQueue.global(qos: .background).async {[weak self] in
+            self?.session?.startRunning()
         }
+        
+    }
 }
