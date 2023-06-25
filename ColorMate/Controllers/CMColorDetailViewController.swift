@@ -11,13 +11,41 @@ protocol CMColorDetailViewControllerDelegate{
     func colorDetailVC(_ vc: CMColorDetailViewController, didGetDismissed: Bool)
 }
 
+struct CMColorDetailViewModel{
+    let name: String
+    let rbga: String
+    let hex: String
+    let colorImageUrl: String
+    let colorImageNamedUrl: String
+}
+
 class CMColorDetailViewController: CMViewController {
     
-    var rgba: RGBA
+    let imageView = UIImageView()
+    let nameLabel: UILabel = {
+        let l = UILabel()
+        l.font = .systemFont(ofSize: 18, weight: .semibold)
+        l.textAlignment = .center
+        return l
+    }()
+    let rgbLabel: UILabel = {
+        let l = UILabel()
+        l.font = .systemFont(ofSize: 16, weight: .regular)
+        l.textAlignment = .center
+        return l
+    }()
+    let hexLabel: UILabel = {
+        let l = UILabel()
+        l.font = .systemFont(ofSize: 16, weight: .regular)
+        l.textAlignment = .center
+        return l
+    }()
+    
+    var viewModel: CMColorDetailViewModel
     var delegate: CMColorDetailViewControllerDelegate?
     
-    init(rgba: RGBA) {
-        self.rgba = rgba
+    init(viewModel: CMColorDetailViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     

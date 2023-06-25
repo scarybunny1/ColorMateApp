@@ -16,7 +16,7 @@
 		3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */; };
 		3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */; };
 		3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */; };
-		3A05E2F22A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */; };
+		3A05E2F22A3C8C1C007B9D64 /* CMColorConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */; };
 		3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F32A3CA132007B9D64 /* TabBarController.swift */; };
 		3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */; };
 		3A0C44B12A41E49400FE97C8 /* CMColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */; };
@@ -37,7 +37,7 @@
 		3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBaseViewController.swift; sourceTree = "<group>"; };
 		3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMScanViewController.swift; sourceTree = "<group>"; };
 		3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorsViewController.swift; sourceTree = "<group>"; };
-		3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorOfTheDayViewController.swift; sourceTree = "<group>"; };
+		3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorConvertViewController.swift; sourceTree = "<group>"; };
 		3A05E2F32A3CA132007B9D64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorRequest.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */,
 				3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */,
 				3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */,
-				3A05E2F12A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift */,
+				3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */,
 				3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */,
 			);
 			path = Controllers;
@@ -242,7 +242,7 @@
 				3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */,
 				3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */,
 				3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */,
-				3A05E2F22A3C8C1C007B9D64 /* CMColorOfTheDayViewController.swift in Sources */,
+				3A05E2F22A3C8C1C007B9D64 /* CMColorConvertViewController.swift in Sources */,
 				3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */,
 				3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */,
 				3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */,

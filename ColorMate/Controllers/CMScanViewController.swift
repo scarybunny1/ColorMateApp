@@ -141,17 +141,26 @@ extension CMScanViewController: AVCapturePhotoCaptureDelegate, AVCaptureVideoDat
         let center_point = CGPoint(x: image.size.height / 2, y: image.size.width / 2)
         let rgba = image.getPixelColor(pos: center_point)
         
-        showColorDetailsBottomSheet(for: rgba)
+        APIManager.shared.checkColor(color: rgba) { [weak self] result in
+            guard let self = self else{return}
+            switch result {
+            case .success(let colorData):
+                showColorDetailsBottomSheet(for: colorData)
+            case .failure(let error):
+                print(error)
+            }
+        }
         session?.stopRunning()
     }
     
-    private func showColorDetailsBottomSheet(for color_rgba: RGBA){
-        let detailVC = CMColorDetailViewController(rgba: color_rgba)
+    private func showColorDetailsBottomSheet(for colorData: CMColorResponse){
+        let rgba = "rgb(\(colorData.rgb.r), \(colorData.rgb.g), \(colorData.rgb.b))"
+        let detailVC = CMColorDetailViewController(viewModel: CMColorDetailViewModel(name: colorData.name.value, rbga: rgba, hex: colorData.hex.value, colorImageUrl: colorData.image.bare, colorImageNamedUrl: colorData.image.named))
         detailVC.delegate = self
         
         let nav = UINavigationController(rootViewController: detailVC)
         if let sheet = nav.sheetPresentationController{
-            sheet.detents = [.medium(), .large()]
+            sheet.detents = [.medium()]
             sheet.preferredCornerRadius = 20
             sheet.prefersGrabberVisible = true
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
