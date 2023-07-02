@@ -15,7 +15,7 @@
 		3A05E2EA2A3C820C007B9D64 /* CMNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2E92A3C820C007B9D64 /* CMNotifications.swift */; };
 		3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */; };
 		3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */; };
-		3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */; };
+		3A05E2F02A3C8BE3007B9D64 /* CMCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */; };
 		3A05E2F22A3C8C1C007B9D64 /* CMColorConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */; };
 		3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F32A3CA132007B9D64 /* TabBarController.swift */; };
 		3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */; };
@@ -23,6 +23,7 @@
 		3A0C44B32A41EBE600FE97C8 /* CMColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */; };
 		3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A32A3DE9BE0001C69B /* Extensions.swift */; };
 		3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */; };
+		3A32A6BE2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,7 @@
 		3A05E2E92A3C820C007B9D64 /* CMNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMNotifications.swift; sourceTree = "<group>"; };
 		3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBaseViewController.swift; sourceTree = "<group>"; };
 		3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMScanViewController.swift; sourceTree = "<group>"; };
-		3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorsViewController.swift; sourceTree = "<group>"; };
+		3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCreateViewController.swift; sourceTree = "<group>"; };
 		3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorConvertViewController.swift; sourceTree = "<group>"; };
 		3A05E2F32A3CA132007B9D64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorResponse.swift; sourceTree = "<group>"; };
 		3A1C11A32A3DE9BE0001C69B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorDetailViewController.swift; sourceTree = "<group>"; };
+		3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorPalleteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,7 @@
 			children = (
 				3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */,
 				3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */,
-				3A05E2EF2A3C8BE3007B9D64 /* CMColorsViewController.swift */,
+				3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */,
 				3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */,
 				3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */,
 			);
@@ -124,6 +126,7 @@
 		3A05E2E12A3C791C007B9D64 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,7 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */,
-				3A05E2F02A3C8BE3007B9D64 /* CMColorsViewController.swift in Sources */,
+				3A05E2F02A3C8BE3007B9D64 /* CMCreateViewController.swift in Sources */,
 				3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */,
 				3A05E2F22A3C8C1C007B9D64 /* CMColorConvertViewController.swift in Sources */,
 				3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */,
@@ -251,6 +254,7 @@
 				3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */,
 				3A0C44B32A41EBE600FE97C8 /* CMColorResponse.swift in Sources */,
 				3A05E2EA2A3C820C007B9D64 /* CMNotifications.swift in Sources */,
+				3A32A6BE2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift in Sources */,
 				3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */,
 				3A05E2E82A3C7D46007B9D64 /* CMThemeManager.swift in Sources */,
 			);

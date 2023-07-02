@@ -17,20 +17,20 @@ class TabBarController: UITabBarController {
     
     private func setUpTabs(){
         let scanVC = CMScanViewController()
-        let colorsVC = CMColorsViewController()
+        let createVC = CMCreateViewController()
         let convertVC = CMColorConvertViewController()
         
         scanVC.title = "Scan"
-        colorsVC.title = "Create"
+        createVC.title = "Create"
         convertVC.title = "Convert"
         
         
         scanVC.navigationItem.largeTitleDisplayMode = .automatic
-        colorsVC.navigationItem.largeTitleDisplayMode = .automatic
+        createVC.navigationItem.largeTitleDisplayMode = .never
         convertVC.navigationItem.largeTitleDisplayMode = .automatic
         
         let nav1 = UINavigationController(rootViewController: scanVC)
-        let nav2 = UINavigationController(rootViewController: colorsVC)
+        let nav2 = UINavigationController(rootViewController: createVC)
         let nav3 = UINavigationController(rootViewController: convertVC)
         
         nav1.tabBarItem = UITabBarItem(title: "Scan", image: UIImage(systemName: "camera"), tag: 1)

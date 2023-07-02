@@ -11,6 +11,7 @@ struct RGBA{
     var red: CGFloat
     var green: CGFloat
     var blue: CGFloat
+    var alpha: CGFloat = 1.0
 }
 
 extension UIImage {
