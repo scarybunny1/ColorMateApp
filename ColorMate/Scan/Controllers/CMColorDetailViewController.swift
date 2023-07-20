@@ -11,14 +11,6 @@ protocol CMColorDetailViewControllerDelegate{
     func colorDetailVC(_ vc: CMColorDetailViewController, didGetDismissed: Bool)
 }
 
-struct CMColorDetailViewModel{
-    let name: String
-    let rbga: String
-    let hex: String
-    let colorImageUrl: String
-    let colorImageNamedUrl: String
-}
-
 class CMColorDetailViewController: CMViewController {
     
     let imageView = UIImageView()
@@ -41,12 +33,15 @@ class CMColorDetailViewController: CMViewController {
         return l
     }()
     
-    var viewModel: CMColorDetailViewModel
+    var viewModel: CMColorDetailViewModel?
+    var rgba: RGBA
     var delegate: CMColorDetailViewControllerDelegate?
     
-    init(viewModel: CMColorDetailViewModel) {
-        self.viewModel = viewModel
+    init(rgba: RGBA) {
+        self.rgba = rgba
         super.init(nibName: nil, bundle: nil)
+        
+        getColorDetails()
     }
     
     required init?(coder: NSCoder) {
@@ -69,7 +64,6 @@ class CMColorDetailViewController: CMViewController {
             
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -80,4 +74,23 @@ class CMColorDetailViewController: CMViewController {
         
     }
 
+    private func getColorDetails(){
+        APIManager.shared.checkColor(color: rgba) { [weak self] result in
+            guard let self = self else{return}
+            switch result {
+            case .success(let colorData):
+                DispatchQueue.main.async {
+                    let rgba = "rgb(\(colorData.rgb.r), \(colorData.rgb.g), \(colorData.rgb.b))"
+                    let detailVM = CMColorDetailViewModel(name: colorData.name.value, rbga: rgba, hex: colorData.hex.value, colorImageUrl: colorData.image.bare, colorImageNamedUrl: colorData.image.named)
+                    self.configure(with: detailVM)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func configure(with vm: CMColorDetailViewModel){
+        print(vm)
+    }
 }

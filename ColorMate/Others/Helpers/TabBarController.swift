@@ -18,7 +18,7 @@ class TabBarController: UITabBarController {
     private func setUpTabs(){
         let scanVC = CMScanViewController()
         let createVC = CMCreateViewController()
-        let convertVC = CMColorConvertViewController()
+        let convertVC = CMConvertViewController()
         
         scanVC.title = "Scan"
         createVC.title = "Create"

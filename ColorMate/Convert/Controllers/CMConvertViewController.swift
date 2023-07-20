@@ -7,8 +7,28 @@
 
 import UIKit
 
+public struct CMRadioButtonViewModel{
+    var title: String
+    var tintColor: UIColor
+}
+
 public struct CMRadioButtonGroup{
-    public var options: [UIButton]
+
+    public var optionsViewModel: [CMRadioButtonViewModel]
+    public var options: [UIButton]{
+        var a: [UIButton] = []
+        optionsViewModel.forEach { vm in
+            let b = UIButton()
+            b.setTitle(vm.title, for: .normal)
+            b.tintColor = vm.tintColor
+            a.append(b)
+        }
+        return a
+    }
+    
+    public init(optionsViewModel: [CMRadioButtonViewModel]) {
+        self.optionsViewModel = optionsViewModel
+    }
     
     public func select(_ button: UIButton){
         button.isSelected = true
@@ -77,7 +97,7 @@ public class CMRadioButton: UIView{
     
 }
 
-class CMColorConvertViewController: CMViewController {
+class CMConvertViewController: CMViewController {
     
     let scrollView = UIScrollView()
     let topView: UIStackView = {

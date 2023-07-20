@@ -16,7 +16,7 @@
 		3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */; };
 		3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */; };
 		3A05E2F02A3C8BE3007B9D64 /* CMCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */; };
-		3A05E2F22A3C8C1C007B9D64 /* CMColorConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */; };
+		3A05E2F22A3C8C1C007B9D64 /* CMConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F12A3C8C1C007B9D64 /* CMConvertViewController.swift */; };
 		3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E2F32A3CA132007B9D64 /* TabBarController.swift */; };
 		3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */; };
 		3A0C44B12A41E49400FE97C8 /* CMColorRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */; };
@@ -24,6 +24,8 @@
 		3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A32A3DE9BE0001C69B /* Extensions.swift */; };
 		3A1C11A62A3DF7050001C69B /* CMColorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */; };
 		3A32A6BE2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */; };
+		3A7C6D7E2A516C6E00EAA137 /* CMColorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C6D7D2A516C6E00EAA137 /* CMColorDetailViewModel.swift */; };
+		3AD350F32A6974CC005BD994 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD350F22A6974CC005BD994 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,7 +40,7 @@
 		3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMBaseViewController.swift; sourceTree = "<group>"; };
 		3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMScanViewController.swift; sourceTree = "<group>"; };
 		3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCreateViewController.swift; sourceTree = "<group>"; };
-		3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorConvertViewController.swift; sourceTree = "<group>"; };
+		3A05E2F12A3C8C1C007B9D64 /* CMConvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMConvertViewController.swift; sourceTree = "<group>"; };
 		3A05E2F32A3CA132007B9D64 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3A0C44AE2A41E3D600FE97C8 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorRequest.swift; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		3A1C11A32A3DE9BE0001C69B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorDetailViewController.swift; sourceTree = "<group>"; };
 		3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorPalleteTableViewCell.swift; sourceTree = "<group>"; };
+		3A7C6D7D2A516C6E00EAA137 /* CMColorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorDetailViewModel.swift; sourceTree = "<group>"; };
+		3AD350F22A6974CC005BD994 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,15 +82,12 @@
 		3A05E2C62A3C712D007B9D64 /* ColorMate */ = {
 			isa = PBXGroup;
 			children = (
-				3A0C44AD2A41E3C900FE97C8 /* Services */,
-				3A05E2E42A3C7930007B9D64 /* Models */,
-				3A05E2E32A3C7929007B9D64 /* Resources */,
-				3A1C11A22A3DE9A90001C69B /* Extensions */,
-				3A05E2E22A3C7921007B9D64 /* ViewModels */,
-				3A05E2E12A3C791C007B9D64 /* Views */,
-				3A05E2E02A3C7917007B9D64 /* Controllers */,
+				3AD350F12A6974B3005BD994 /* Reusables */,
+				3A7C6D6F2A516B6500EAA137 /* Scan */,
+				3A7C6D6E2A516B5E00EAA137 /* Convert */,
+				3A7C6D6D2A516B5500EAA137 /* Create */,
+				3A05E2E02A3C7917007B9D64 /* Others */,
 				3A05E2DF2A3C790F007B9D64 /* App Files */,
-				3A05E2DD2A3C7904007B9D64 /* Helpers */,
 				3A05E2D52A3C712D007B9D64 /* Info.plist */,
 			);
 			path = ColorMate;
@@ -111,31 +112,16 @@
 			path = "App Files";
 			sourceTree = "<group>";
 		};
-		3A05E2E02A3C7917007B9D64 /* Controllers */ = {
+		3A05E2E02A3C7917007B9D64 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */,
-				3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */,
-				3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */,
-				3A05E2F12A3C8C1C007B9D64 /* CMColorConvertViewController.swift */,
-				3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */,
+				3A05E2DD2A3C7904007B9D64 /* Helpers */,
+				3A05E2E32A3C7929007B9D64 /* Resources */,
+				3A1C11A22A3DE9A90001C69B /* Extensions */,
+				3A0C44AD2A41E3C900FE97C8 /* Services */,
+				3A7C6D7C2A516BEA00EAA137 /* Controllers */,
 			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		3A05E2E12A3C791C007B9D64 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		3A05E2E22A3C7921007B9D64 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
+			path = Others;
 			sourceTree = "<group>";
 		};
 		3A05E2E32A3C7929007B9D64 /* Resources */ = {
@@ -145,15 +131,6 @@
 				3A05E2D22A3C712D007B9D64 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		3A05E2E42A3C7930007B9D64 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */,
-				3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		3A0C44AD2A41E3C900FE97C8 /* Services */ = {
@@ -170,6 +147,147 @@
 				3A1C11A32A3DE9BE0001C69B /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3A7C6D6D2A516B5500EAA137 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C6D7B2A516BAB00EAA137 /* Views */,
+				3A7C6D7A2A516BA900EAA137 /* Models */,
+				3A7C6D792A516BA300EAA137 /* ViewModels */,
+				3A7C6D782A516B9B00EAA137 /* Controllers */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		3A7C6D6E2A516B5E00EAA137 /* Convert */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C6D762A516B9300EAA137 /* Views */,
+				3A7C6D752A516B9000EAA137 /* Models */,
+				3A7C6D742A516B8B00EAA137 /* ViewModels */,
+				3A7C6D732A516B8500EAA137 /* Controllers */,
+			);
+			path = Convert;
+			sourceTree = "<group>";
+		};
+		3A7C6D6F2A516B6500EAA137 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C6D772A516B9700EAA137 /* Views */,
+				3A7C6D722A516B7C00EAA137 /* Models */,
+				3A7C6D712A516B7600EAA137 /* ViewModels */,
+				3A7C6D702A516B6E00EAA137 /* Controllers */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		3A7C6D702A516B6E00EAA137 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2ED2A3C8B7C007B9D64 /* CMScanViewController.swift */,
+				3A1C11A52A3DF7050001C69B /* CMColorDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A7C6D712A516B7600EAA137 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C6D7D2A516C6E00EAA137 /* CMColorDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A7C6D722A516B7C00EAA137 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A0C44B02A41E49400FE97C8 /* CMColorRequest.swift */,
+				3A0C44B22A41EBE600FE97C8 /* CMColorResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A7C6D732A516B8500EAA137 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2F12A3C8C1C007B9D64 /* CMConvertViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A7C6D742A516B8B00EAA137 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A7C6D752A516B9000EAA137 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A7C6D762A516B9300EAA137 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A7C6D772A516B9700EAA137 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A7C6D782A516B9B00EAA137 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A7C6D792A516BA300EAA137 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A7C6D7A2A516BA900EAA137 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A7C6D7B2A516BAB00EAA137 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3A7C6D7C2A516BEA00EAA137 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A05E2EB2A3C84F3007B9D64 /* CMBaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3AD350F12A6974B3005BD994 /* Reusables */ = {
+			isa = PBXGroup;
+			children = (
+				3AD350F22A6974CC005BD994 /* CardView.swift */,
+			);
+			path = Reusables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +363,9 @@
 				3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */,
 				3A05E2F02A3C8BE3007B9D64 /* CMCreateViewController.swift in Sources */,
 				3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */,
-				3A05E2F22A3C8C1C007B9D64 /* CMColorConvertViewController.swift in Sources */,
+				3A05E2F22A3C8C1C007B9D64 /* CMConvertViewController.swift in Sources */,
 				3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */,
+				3A7C6D7E2A516C6E00EAA137 /* CMColorDetailViewModel.swift in Sources */,
 				3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */,
 				3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */,
 				3A05E2CA2A3C712D007B9D64 /* SceneDelegate.swift in Sources */,
@@ -256,6 +375,7 @@
 				3A05E2EA2A3C820C007B9D64 /* CMNotifications.swift in Sources */,
 				3A32A6BE2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift in Sources */,
 				3A05E2EC2A3C84F3007B9D64 /* CMBaseViewController.swift in Sources */,
+				3AD350F32A6974CC005BD994 /* CardView.swift in Sources */,
 				3A05E2E82A3C7D46007B9D64 /* CMThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,6 +32,6 @@ class APIManager{
             }catch{
                 print(error)
             }
-        }
+        }.resume()
     }
 }
