@@ -26,6 +26,9 @@
 		3A32A6BE2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */; };
 		3A7C6D7E2A516C6E00EAA137 /* CMColorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C6D7D2A516C6E00EAA137 /* CMColorDetailViewModel.swift */; };
 		3AD350F32A6974CC005BD994 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD350F22A6974CC005BD994 /* CardView.swift */; };
+		3AD350F52A697D46005BD994 /* CMCreatePalleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD350F42A697D46005BD994 /* CMCreatePalleteViewController.swift */; };
+		3AD350F72A697FFB005BD994 /* CMPalleteColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD350F62A697FFB005BD994 /* CMPalleteColorView.swift */; };
+		3AD350F92A69803F005BD994 /* CMColorPalleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD350F82A69803F005BD994 /* CMColorPalleteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorPalleteTableViewCell.swift; sourceTree = "<group>"; };
 		3A7C6D7D2A516C6E00EAA137 /* CMColorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorDetailViewModel.swift; sourceTree = "<group>"; };
 		3AD350F22A6974CC005BD994 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3AD350F42A697D46005BD994 /* CMCreatePalleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMCreatePalleteViewController.swift; sourceTree = "<group>"; };
+		3AD350F62A697FFB005BD994 /* CMPalleteColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPalleteColorView.swift; sourceTree = "<group>"; };
+		3AD350F82A69803F005BD994 /* CMColorPalleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMColorPalleteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				3A05E2EF2A3C8BE3007B9D64 /* CMCreateViewController.swift */,
+				3AD350F42A697D46005BD994 /* CMCreatePalleteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 		3A7C6D792A516BA300EAA137 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				3AD350F82A69803F005BD994 /* CMColorPalleteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -270,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				3A32A6BD2A48A09D006ED025 /* CMColorPalleteTableViewCell.swift */,
+				3AD350F62A697FFB005BD994 /* CMPalleteColorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,10 +371,13 @@
 			files = (
 				3A0C44AF2A41E3D600FE97C8 /* APIManager.swift in Sources */,
 				3A05E2F02A3C8BE3007B9D64 /* CMCreateViewController.swift in Sources */,
+				3AD350F72A697FFB005BD994 /* CMPalleteColorView.swift in Sources */,
 				3A05E2C82A3C712D007B9D64 /* AppDelegate.swift in Sources */,
 				3A05E2F22A3C8C1C007B9D64 /* CMConvertViewController.swift in Sources */,
 				3A05E2F42A3CA132007B9D64 /* TabBarController.swift in Sources */,
+				3AD350F92A69803F005BD994 /* CMColorPalleteViewModel.swift in Sources */,
 				3A7C6D7E2A516C6E00EAA137 /* CMColorDetailViewModel.swift in Sources */,
+				3AD350F52A697D46005BD994 /* CMCreatePalleteViewController.swift in Sources */,
 				3A05E2EE2A3C8B7C007B9D64 /* CMScanViewController.swift in Sources */,
 				3A1C11A42A3DE9BE0001C69B /* Extensions.swift in Sources */,
 				3A05E2CA2A3C712D007B9D64 /* SceneDelegate.swift in Sources */,

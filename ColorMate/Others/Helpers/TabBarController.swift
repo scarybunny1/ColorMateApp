@@ -13,6 +13,7 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         setUpTabs()
+        selectedIndex = 1
     }
     
     private func setUpTabs(){
